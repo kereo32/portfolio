@@ -6,7 +6,6 @@ type ApplicationIconProps = {
 };
 
 const ApplicationIcon = ({ applicationImageUrl, size = 'w-10' }: ApplicationIconProps) => {
-  console.log(size);
   const [isActive, setIsActive] = useState(false);
   return (
     <>
@@ -16,8 +15,12 @@ const ApplicationIcon = ({ applicationImageUrl, size = 'w-10' }: ApplicationIcon
           setIsActive((prevState) => !prevState);
         }}
       >
-        <img src={applicationImageUrl} className={`${size} h-[80%]`} />
-        <div className={`w-1 h-1 bg-white rounded-full inline-block transition-opacity duration-200 ease-in-out opacity-${isActive ? '100' : '0'} mt-1`} />
+        <img src={applicationImageUrl} className={`${size} h-8 w-10`} />
+        <div
+          className={`w-1 h-1 bg-white rounded-full inline-block transition-opacity duration-200 ease-in-out mt-1 mb-1 ${
+            isActive ? 'opacity-100' : 'opacity-0'
+          }`}
+        />
       </button>
     </>
   );

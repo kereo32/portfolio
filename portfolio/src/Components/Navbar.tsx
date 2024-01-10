@@ -25,7 +25,7 @@ const Navbar = () => {
       onMouseEnter={handleMouseEnter}
       onMouseLeave={handleMouseLeave}
     >
-      <div className="flex flex-row h-full items-center bg-transparent border-[0.01rem] rounded-xl border-gray-400 shadow-2xl">
+      <div className="flex flex-row min-h-max items-center bg-transparent border-[0.01rem] rounded-xl border-gray-400 shadow-2xl">
         <ApplicationIcon applicationImageUrl={finder} />
         <ApplicationIcon size={'w-8'} applicationImageUrl={discord} />
         <ApplicationIcon size={'w-8'} applicationImageUrl={spotify} />
