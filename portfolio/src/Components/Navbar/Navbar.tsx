@@ -23,7 +23,7 @@ const TopNavbar: React.FC = () => {
   }, []);
 
   return (
-    <div className={`fixed top-0 left-0 w-full h-[3.5%] flex justify-start items-center bg-gradient-to-r from-topBarEasy to-topBarHard via-70% opacity-80`}>
+    <div className={`flex w-full h-[3.5%] justify-start items-center bg-gradient-to-r from-topBarEasy to-topBarHard via-70% opacity-80`}>
       <div className="flex flex-row w-full">
         <div className="flex flex-row w-[50%] items-center justify-start">
           <NavbarIcon navbarIconUrl={apple} classNames="h-4 invert pl-4" onClick={(event) => show('Apple', event)} />
