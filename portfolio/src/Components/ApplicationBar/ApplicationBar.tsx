@@ -8,7 +8,7 @@ import bin from '/images/bin.png';
 import file from '/images/file.png';
 import ApplicationIcon from './ApplicationIcon';
 
-const Navbar = () => {
+const ApplicationBar = () => {
   const [navbarSize, setNavbarSize] = useState({ height: 'h-[8%]', translate: '' });
 
   const handleMouseEnter = () => {
@@ -38,4 +38,4 @@ const Navbar = () => {
   );
 };
 
-export default Navbar;
+export default ApplicationBar;

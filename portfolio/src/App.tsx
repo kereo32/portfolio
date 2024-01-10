@@ -1,8 +1,9 @@
-import Navbar from './Components/Navbar';
+import { ApplicationBar, TopNavBar } from './Components';
 function App() {
   return (
     <div className=" h-screen w-screen bg-macbg bg-cover">
-      <Navbar />
+      <TopNavBar />
+      <ApplicationBar />
     </div>
   );
 }

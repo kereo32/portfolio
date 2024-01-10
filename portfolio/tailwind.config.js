@@ -6,6 +6,10 @@ export default {
       backgroundImage: {
         macbg: "url('/images/macbg.jpg')",
       },
+      colors: {
+        topBarHard: '#993910',
+        topBarEasy: '#c28870',
+      },
     },
   },
   plugins: [],
