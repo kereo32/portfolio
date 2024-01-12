@@ -9,6 +9,8 @@ export default {
       colors: {
         topBarHard: '#993910',
         topBarEasy: '#c28870',
+        finderBg: '#2e201d',
+        finderHeaderBg: '#603F30',
       },
     },
   },

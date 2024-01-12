@@ -5,9 +5,10 @@ import { useState } from 'react';
 
 type DocumentBoardProps = {
   showWindowPopup: (title: string, content: []) => void;
+  hideWindowPopup: () => void;
 };
 
-const DocumentBoard = ({ showWindowPopup }: DocumentBoardProps) => {
+const DocumentBoard = ({ showWindowPopup, hideWindowPopup }: DocumentBoardProps) => {
   const [activeFolder, setActiveFolder] = useState('');
   const { isOpen, toggle, setFalse } = useToggler(false);
   const handleClick = (e: React.MouseEvent<HTMLButtonElement>) => {
@@ -15,6 +16,7 @@ const DocumentBoard = ({ showWindowPopup }: DocumentBoardProps) => {
       case 1:
         setActiveFolder(e.currentTarget.id);
         setFalse();
+        hideWindowPopup();
         break;
       case 2:
         toggle();
