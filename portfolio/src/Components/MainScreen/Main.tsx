@@ -1,5 +1,5 @@
 import DocumentBoard from '../Documents/DocumentBoard';
-import Window from '../ApplicationWindow/Window';
+import Finder from '../Finder/Finder';
 import useWindowPopUp from '../../Hooks/useWindowPopUp';
 const Main = () => {
   const { showPopup, title, content, showWindowPopup, hideWindowPopup } = useWindowPopUp();
@@ -7,9 +7,9 @@ const Main = () => {
     <div className="flex flex-row w-full h-full justify-evenly items-start">
       <div className="flex flex-col w-[70%] h-[85%] justify-center items-end">
         {
-          <Window isOpen={showPopup} title={title}>
+          <Finder isOpen={showPopup} title={title}>
             {content}
-          </Window>
+          </Finder>
         }
       </div>
       <div className="flex flex-col w-[33%] h-full justify-center">

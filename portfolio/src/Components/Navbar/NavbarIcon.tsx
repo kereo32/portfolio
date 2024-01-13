@@ -7,7 +7,9 @@ type NavbarIconProps = {
 
 const NavbarIcon = ({ navbarIconName, navbarIconUrl, classNames, onClick }: NavbarIconProps) => {
   return (
-    <button onClick={onClick}>{navbarIconUrl ? <img src={navbarIconUrl} className={classNames} /> : <p className={classNames}>{navbarIconName}</p>}</button>
+    <button onClick={onClick}>
+      {navbarIconUrl ? <img src={navbarIconUrl} className={classNames} /> : <span className={classNames}>{navbarIconName}</span>}
+    </button>
   );
 };
 

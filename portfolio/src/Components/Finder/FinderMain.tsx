@@ -1,8 +1,8 @@
-type WindowMainProps = {
+type FinderMainProps = {
   children: React.ReactNode;
 };
-const WindowMain = ({ children }: WindowMainProps) => {
+const FinderMain = ({ children }: FinderMainProps) => {
   return <div className="flex flex-row w-full h-[90%] bg-finderBg">{children}</div>;
 };
 
-export default WindowMain;
+export default FinderMain;

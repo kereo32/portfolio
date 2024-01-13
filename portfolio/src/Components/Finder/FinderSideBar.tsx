@@ -3,9 +3,9 @@ import contact from '/images/contact.png';
 import personal from '/images/personal.png';
 import projects from '/images/projects.png';
 
-import WindowShortcutTab from './WindowShortcutTab';
+import FinderShortcutTab from './FinderShortcutTab';
 
-const WindowSidebar = () => {
+const FinderSideBar = () => {
   return (
     <>
       <div className="flex flex-col w-[15%] h-full bg-finderHeaderBg bg-opacity-90 rounded-l-lg">
@@ -25,10 +25,10 @@ const WindowSidebar = () => {
         <div className="flex ml-2 flex-col h-[90%] w-full justify-start items-start">
           <p className="text-white text-xs font-thin -mt-2 opacity-75">Favorites</p>
           <div className="flex flex-col w-full h-[40%] mt-3 text-white text-sm space-y-2">
-            <WindowShortcutTab title="Info" imageUrl={info} />
-            <WindowShortcutTab title="Projects" imageUrl={projects} />
-            <WindowShortcutTab title="Personal" imageUrl={personal} />
-            <WindowShortcutTab title="Contact" imageUrl={contact} />
+            <FinderShortcutTab title="Info" imageUrl={info} />
+            <FinderShortcutTab title="Projects" imageUrl={projects} />
+            <FinderShortcutTab title="Personal" imageUrl={personal} />
+            <FinderShortcutTab title="Contact" imageUrl={contact} />
           </div>
         </div>
       </div>
@@ -36,4 +36,4 @@ const WindowSidebar = () => {
   );
 };
 
-export default WindowSidebar;
+export default FinderSideBar;

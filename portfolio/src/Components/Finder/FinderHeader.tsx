@@ -1,10 +1,10 @@
 import leftArrow from '/images/leftArrow.png';
 import SearchComponent from '../Shared/SearchComponent';
 
-type WindowHeaderType = {
+type FinderHeaderType = {
   title: string;
 };
-const WindowHeader = ({ title }: WindowHeaderType) => {
+const FinderHeader = ({ title }: FinderHeaderType) => {
   return (
     <div className="flex flex-row w-full h-[10%] bg-finderBg border-b-[1px] shadow-md border-finderHeaderBg">
       <div className="flex flex-row w-[10%] h-full justify-center items-center">
@@ -23,4 +23,4 @@ const WindowHeader = ({ title }: WindowHeaderType) => {
   );
 };
 
-export default WindowHeader;
+export default FinderHeader;

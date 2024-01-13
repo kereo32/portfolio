@@ -1,9 +1,9 @@
-type WindowShortcutTabProps = {
+type FinderShortcutTabProps = {
   title: string;
   imageUrl: string;
 };
 
-const WindowShortcutTab = ({ title, imageUrl }: WindowShortcutTabProps) => {
+const FinderShortcutTab = ({ title, imageUrl }: FinderShortcutTabProps) => {
   return (
     <>
       <div className={`flex flex-row w-full h-[10%] items-center hover:bg-finderBg hover:bg-opacity-40`}>
@@ -16,4 +16,4 @@ const WindowShortcutTab = ({ title, imageUrl }: WindowShortcutTabProps) => {
   );
 };
 
-export default WindowShortcutTab;
+export default FinderShortcutTab;
