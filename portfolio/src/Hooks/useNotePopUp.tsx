@@ -10,7 +10,6 @@ const useNotePopUp = ({ title, content }: NotePopUpHook) => {
   const [isPopupOpen, setIsPopupOpen] = useState(false);
 
   const openPopup = () => {
-    console.log("??")
     setIsPopupOpen(true);
   };
 

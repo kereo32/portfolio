@@ -52,5 +52,42 @@ const InfoStaticContent = [
     `
   }
 ]
+const ProjectsStaticContent = [
+  {
+    title : "McCormick French’s Mustard",
+    description : "A playable ad for McCormick  French’s Mustard.",
+    url : "https://c4d-cdn.adcolony.com/adc/4.11.2/240113/a25c7ac5-73ec-4c67-81f3-eb1266a0fdfc/0b84ffd4-556a-44d2-8d12-4e651bb39436.html",
+  },
+  {
+    title : "Axe the Runner",
+    description : "A playable ad for Axe the Runner.",
+    url : "https://c4d-cdn.adcolony.com/adc/3.4.2/210817/ca235e9f-cd6c-45c7-bf4c-dd891cd8e812/696bcdde-6d7b-419c-9c63-6e2b005b0d21.html",
+  },
+  {
+    title : "Hyundai360",
+    description : "360 Experince for Hyundai.",
+    url : "https://hyundai360.s3.eu-central-1.amazonaws.com/hyundai360/index.html",
+  },
+  {
+    title : "ShellBox",
+    description : "A playable ad for ShellBox Brazil Market.",
+    url : "https://c4d-cdn.adcolony.com/adc/4.11.2/240113/04248e88-921c-40b7-99e6-ec0ce1b12e5f/0ff81678-11ef-42d4-8b14-12398d8d4c65.html",
+  },
+  {
+    title : "Lego City",
+    description : "A play to explore experince for Lego City.",
+    url : "https://c4d-cdn.adcolony.com/adc/3.3.4/210803/2730d8f5-cff5-43e5-9962-14dfc4f32cfd/0cfeb415-ba42-4c44-8ba6-c3b55065627e.html",
+  },
+  {
+    title : "Seven Seas",
+    description : "A play to explore experince for Seven Seas.",
+    url : "https://c4d-cdn.adcolony.com/adc/4.11.2/240113/63e4d803-1225-4b54-ae3e-0c09ca8b47b1/1180da09-dda4-4e6f-9603-2ea51fcffa59.html",
+  },
+  {
+    title : "Jager Party",
+    description : "A background replacement with device camera experince for Jager Party.",
+    url : "https://jager-ar2.s3.eu-central-1.amazonaws.com/build/index.html",
+  }
+]
 
-export { InfoStaticContent}
+export { InfoStaticContent,ProjectsStaticContent}

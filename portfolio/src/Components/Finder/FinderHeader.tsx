@@ -1,5 +1,5 @@
 import leftArrow from '/images/leftArrow.png';
-import SearchComponent from '../Shared/SearchComponent';
+import { SearchComponent } from '../Shared';
 
 type FinderHeaderType = {
   title: string;

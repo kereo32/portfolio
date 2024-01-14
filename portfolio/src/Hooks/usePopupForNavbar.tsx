@@ -1,4 +1,4 @@
-import { useState, useRef } from 'react';
+import { useState } from 'react';
 
 interface PopupHook {
   showPopup: boolean;
@@ -6,14 +6,12 @@ interface PopupHook {
   activeNavbarIcon: string;
   showNavbarPopUp: (navbarIconName: string, event: React.MouseEvent<HTMLElement>) => void;
   hideNavbarPopUp: () => void;
-  popupRef: React.MutableRefObject<HTMLElement | null>;
 }
 
 const usePopupForNavbar = (): PopupHook => {
   const [showPopup, setShowPopup] = useState(false);
   const [popupPosition, setPopupPosition] = useState({ top: 0, left: 0 });
   const [activeNavbarIcon, setActiveNavbarIcon] = useState('');
-  const popupRef = useRef<HTMLElement | null>(null);
 
   const showNavbarPopUp = (navbarIconName: string, event: React.MouseEvent<HTMLElement>) => {
     setActiveNavbarIcon(navbarIconName);
@@ -26,7 +24,7 @@ const usePopupForNavbar = (): PopupHook => {
     setShowPopup(false);
   };
 
-  return { showPopup, popupPosition, activeNavbarIcon, showNavbarPopUp, hideNavbarPopUp, popupRef };
+  return { showPopup, popupPosition, activeNavbarIcon, showNavbarPopUp, hideNavbarPopUp };
 };
 
 export default usePopupForNavbar;

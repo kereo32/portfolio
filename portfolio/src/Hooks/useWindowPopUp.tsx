@@ -1,8 +1,8 @@
 /* eslint-disable @typescript-eslint/no-explicit-any */
 /* TODO : Change Any type on content*/
 import { useState, useEffect } from 'react';
-import { InfoStaticContent } from '../Constants/FinderContent';
-import BasicNote from '../Components/Shared/BasicNote';
+import { InfoStaticContent,ProjectsStaticContent } from '../Constants/FinderContent';
+import {BasicNote,ProjectPreview} from '../Components/Shared';
 
 interface WindowPopUpHook {
   showPopup: boolean;
@@ -24,6 +24,13 @@ const useWindowPopUp = (): WindowPopUpHook => {
         setContent(
           InfoStaticContent.map((item) => (
             <BasicNote name={item.name}  title={item.title} content={item.content} />
+          ))
+        );
+        break;
+      case 'Projects':
+        setContent(
+          ProjectsStaticContent.map((item) => (
+            <ProjectPreview title={item.title}  description={item.description} url={item.url} />
           ))
         );
         break;
