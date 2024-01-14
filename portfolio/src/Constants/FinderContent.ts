@@ -52,6 +52,25 @@ const InfoStaticContent = [
     `
   }
 ]
+const ProjectFolders = [
+  
+  {
+    name: "Playables",
+    title: "Playables",
+    content: `Here are some of my playables. I am working on them in my free time.`
+  },
+  {
+    name: "Web",
+    title: "Web",
+    content: `Here are some of my web projects. I am working on them in my free time.`
+  },
+  {
+    name: "Games",
+    title: "Games",
+    content: `Here are some of my games. I am working on them in my free time.`
+  },
+
+]
 const ProjectsStaticContent = [
   {
     title : "McCormick French’s Mustard",
@@ -67,6 +86,11 @@ const ProjectsStaticContent = [
     title : "Hyundai360",
     description : "360 Experince for Hyundai.",
     url : "https://hyundai360.s3.eu-central-1.amazonaws.com/hyundai360/index.html",
+  },
+  {
+    title : "Kia360",
+    description : "360 Experince for Kia.",
+    url : "https://kia360.s3.eu-central-1.amazonaws.com/finalPano/kia360+pano/index.html",
   },
   {
     title : "ShellBox",
@@ -90,4 +114,4 @@ const ProjectsStaticContent = [
   }
 ]
 
-export { InfoStaticContent,ProjectsStaticContent}
+export { InfoStaticContent,ProjectsStaticContent,ProjectFolders}

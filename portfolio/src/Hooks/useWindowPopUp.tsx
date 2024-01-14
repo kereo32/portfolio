@@ -1,8 +1,7 @@
 /* eslint-disable @typescript-eslint/no-explicit-any */
 /* TODO : Change Any type on content*/
 import { useState, useEffect } from 'react';
-import { InfoStaticContent,ProjectsStaticContent } from '../Constants/FinderContent';
-import {BasicNote,ProjectPreview} from '../Components/Shared';
+import {generateContent} from '../Helpers/Util';
 
 interface WindowPopUpHook {
   showPopup: boolean;
@@ -19,25 +18,7 @@ const useWindowPopUp = (): WindowPopUpHook => {
   const [content, setContent] = useState<JSX.Element[]>([]);
 
   useEffect(() => {
-    switch (title) {
-      case 'Info':
-        setContent(
-          InfoStaticContent.map((item) => (
-            <BasicNote name={item.name}  title={item.title} content={item.content} />
-          ))
-        );
-        break;
-      case 'Projects':
-        setContent(
-          ProjectsStaticContent.map((item) => (
-            <ProjectPreview title={item.title}  description={item.description} url={item.url} />
-          ))
-        );
-        break;
-      default:
-        setContent([]);
-        break;
-    }
+    setContent(generateContent(title,changeTitle))
   }, [title]);
 
   const showWindowPopup = (title: string) => {

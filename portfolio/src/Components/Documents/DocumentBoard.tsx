@@ -1,4 +1,4 @@
-import Folder from './Folder';
+import {Folder} from '../Shared'
 import Papers from './Papers';
 import useToggler from '../../Hooks/useToggler';
 import { useState } from 'react';
