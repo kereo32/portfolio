@@ -5,7 +5,15 @@ import projects from '/images/projects.png';
 
 import FinderShortcutTab from './FinderShortcutTab';
 
+import {useState} from 'react';
+
 const FinderSideBar = () => {
+  const [active, setActive] = useState('Info');
+
+  const handleActive = (title: string) => {
+    setActive(title);
+  }
+
   return (
     <>
       <div className="flex flex-col w-[15%] h-full bg-finderHeaderBg bg-opacity-90 rounded-l-lg">
@@ -25,10 +33,10 @@ const FinderSideBar = () => {
         <div className="flex ml-2 flex-col h-[90%] w-full justify-start items-start">
           <p className="text-white text-xs font-thin -mt-2 opacity-75">Favorites</p>
           <div className="flex flex-col w-full h-[40%] mt-3 text-white text-sm space-y-2">
-            <FinderShortcutTab title="Info" imageUrl={info} />
-            <FinderShortcutTab title="Projects" imageUrl={projects} />
-            <FinderShortcutTab title="Personal" imageUrl={personal} />
-            <FinderShortcutTab title="Contact" imageUrl={contact} />
+            <FinderShortcutTab handleActive={() => handleActive('Info')} isActive={active === 'Info'} title="Info" imageUrl={info} />
+            <FinderShortcutTab handleActive={() => handleActive('Projects')} isActive={active === 'Projects'}  title="Projects" imageUrl={projects} />
+            <FinderShortcutTab handleActive={() => handleActive('Personal')} isActive={active === 'Personal'}  title="Personal" imageUrl={personal} />
+            <FinderShortcutTab handleActive={() => handleActive('Contact')} isActive={active === 'Contact'}  title="Contact" imageUrl={contact} />
           </div>
         </div>
       </div>

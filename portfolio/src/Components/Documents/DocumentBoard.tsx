@@ -4,7 +4,7 @@ import useToggler from '../../Hooks/useToggler';
 import { useState } from 'react';
 
 type DocumentBoardProps = {
-  showWindowPopup: (title: string, content: []) => void;
+  showWindowPopup: (title: string) => void;
   hideWindowPopup: () => void;
 };
 
@@ -20,15 +20,15 @@ const DocumentBoard = ({ showWindowPopup, hideWindowPopup }: DocumentBoardProps)
         break;
       case 2:
         toggle();
-        showWindowPopup(activeFolder, []);
+        showWindowPopup(activeFolder);
         break;
     }
   };
   return (
     <div className="flex flex-col w-full h-[75%] justify-start items-end">
       <div className="flex flex-row w-full h-fit items-center justify-end">
+        <Folder isActiveFolder={activeFolder == 'Info'} clickHandler={handleClick} isOpen={isOpen} title="Info" />
         <Folder isActiveFolder={activeFolder == 'Projects'} clickHandler={handleClick} isOpen={isOpen} title="Projects" />
-        <Folder isActiveFolder={activeFolder == 'Personal'} clickHandler={handleClick} isOpen={isOpen} title="Personal" />
       </div>
       <div className="flex flex-col w-full h-fit items-end justify-end">
         <div className="flex flex-col w-ful h-full">
