@@ -3,7 +3,7 @@ import search from '/images/search.png';
 import leftArrow from '/images/leftArrow.png';
 
 const SearchComponent = () => {
-  const [isExpanded, setExpanded] = useState(true);
+  const [isExpanded, setExpanded] = useState(false);
 
   const handleIconClick = () => {
     setExpanded(!isExpanded);
