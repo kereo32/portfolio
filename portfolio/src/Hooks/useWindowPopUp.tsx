@@ -9,6 +9,7 @@ interface WindowPopUpHook {
   title: string;
   content: JSX.Element[];
   showWindowPopup: (title: string) => void;
+  changeTitle: (title: string) => void;
   hideWindowPopup: () => void;
 }
 
@@ -37,11 +38,14 @@ const useWindowPopUp = (): WindowPopUpHook => {
     setShowPopup(true);
   };
 
+  const changeTitle = (title: string) => {
+    setTitle(title);
+  }
   const hideWindowPopup = () => {
     setShowPopup(false);
   };
 
-  return { showPopup, title, content, showWindowPopup, hideWindowPopup };
+  return { showPopup, title, content,changeTitle, showWindowPopup, hideWindowPopup };
 };
 
 export default useWindowPopUp;
