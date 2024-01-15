@@ -71,7 +71,7 @@ const ProjectFolders = [
   },
 
 ]
-const ProjectsStaticContent = [
+const PlayablesStaticContent = [
   {
     title : "McCormick French’s Mustard",
     description : "A playable ad for McCormick  French’s Mustard.",
@@ -141,5 +141,37 @@ const ProjectsStaticContent = [
     `,
   }
 ]
+const WebStaticContent = [
+  {
+    title : "Portfolio",
+    description : "This portfolio website.",
+    liveUrl : "LIVE LINK TEMP",
+    githubUrl:"https://github.com/kereo32/portfolio",
+    techStack : `
+    React | TypeScript | Tailwind | Vite`
+  },
+  {
+    title: "OEL",
+    description: "Secure and fast login template with a backend.",
+    liveUrl : "https://oel.netlify.app/",
+    githubUrl:"https://github.com/kereo32/overEngineeredLoginPage",
+    techStack: `React | TypeScript | Redux | Node | Express | MongoDB | Tailwind | Vite`
+  },
+  {
+    title: "Todo App",
+    description: "Todo app with user authentication and file storage.",
+    liveUrl : "https://lively-ganache-ee6251.netlify.app/",
+    githubUrl:"https://github.com/kereo32/TodoAppFrontend",
+    techStack: `React | TypeScript | Redux | Node | Express | JWT | MongoDB | AWS S3 | Tailwind | Vite`
+  },
+  {
+    title: "Blog",
+    description: "Basic blog site for practicing Next.js.",
+    liveUrl : "",
+    githubUrl:"https://github.com/kereo32/blogWebsite",
+    techStack: `Next | JavaScript | Tailwind | MySQL`
+  }
 
-export { InfoStaticContent,ProjectsStaticContent,ProjectFolders}
+]
+
+export { InfoStaticContent,PlayablesStaticContent,ProjectFolders,WebStaticContent}

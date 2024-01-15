@@ -1,14 +1,14 @@
 import preview from '/images/preview.png'
-import useProjectPreviewPopUp from '../../Hooks/useProjectPreviewPopUp'
-type ProjectPreviewProps = {
+import usePlayablePreviewPopUp from '../../Hooks/usePlayablePreviewPopUp'
+type PlayablePreviewProps = {
   title: string;
   description: string;
   url: string;
   solution: string;
 }
 
-const ProjectPreview = ({ title, description, url, solution }: ProjectPreviewProps) => {
-  const { openPopup, Popup, isPopupOpen } = useProjectPreviewPopUp({ title, description, url, solution })
+const PlayablePreview = ({ title, description, url, solution }: PlayablePreviewProps) => {
+  const { openPopup, Popup, isPopupOpen } = usePlayablePreviewPopUp({ title, description, url, solution })
   return (
     <>
       <div className='flex flex-col w-[10%] h-[10%] justify-center m-4'>
@@ -22,4 +22,4 @@ const ProjectPreview = ({ title, description, url, solution }: ProjectPreviewPro
   )
 }
 
-export default ProjectPreview
+export default PlayablePreview

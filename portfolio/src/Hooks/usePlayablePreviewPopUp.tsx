@@ -2,14 +2,14 @@ import { useState } from 'react';
 import close from '/images/close.png';
 import phone from '/images/phone.png';
 
-interface ProjectPreviewHook {
+interface PreviewPopUpHook {
   title: string;
   description: string;
   url: string;
   solution: string;
 }
 
-const useProjectPreviewPopUp = ({ title, description, url, solution }: ProjectPreviewHook) => {
+const usePlayablePreviewPopUp = ({ title, description, url, solution }: PreviewPopUpHook) => {
   const [isPopupOpen, setIsPopupOpen] = useState(false);
 
   const openPopup = () => {
@@ -64,4 +64,4 @@ const useProjectPreviewPopUp = ({ title, description, url, solution }: ProjectPr
   };
 };
 
-export default useProjectPreviewPopUp;
+export default usePlayablePreviewPopUp;
