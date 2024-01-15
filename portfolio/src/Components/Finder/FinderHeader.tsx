@@ -6,7 +6,9 @@ type FinderHeaderType = {
   browsingHistory: string[];
   changeTitle: (title: string) => void;
 };
+
 const FinderHeader = ({ title, browsingHistory, changeTitle }: FinderHeaderType) => {
+
   const onArrowClick = () => {
     if (browsingHistory.length > 1 && browsingHistory[browsingHistory.length - 2] !== '') {
       changeTitle(browsingHistory[browsingHistory.length - 2]);

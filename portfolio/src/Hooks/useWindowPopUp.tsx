@@ -8,9 +8,13 @@ interface WindowPopUpHook {
   title: string;
   content: JSX.Element[];
   browsingHistory: string[];
+  isFullScreen: boolean;
+  isMinimized: boolean;
   showWindowPopup: (title: string) => void;
   changeTitle: (title: string) => void;
   hideWindowPopup: () => void;
+  toggleFullScreen: () => void;
+  toggleMinimized: () => void;
 }
 
 const useWindowPopUp = (): WindowPopUpHook => {
@@ -18,6 +22,8 @@ const useWindowPopUp = (): WindowPopUpHook => {
   const [title, setTitle] = useState('');
   const [content, setContent] = useState<JSX.Element[]>([]);
   const [browsingHistory, setBrowsingHistory] = useState<string[]>([]);
+  const [isFullScreen, setIsFullScreen] = useState(false);
+  const [isMinimized, setIsMinimized] = useState(false);
 
   useEffect(() => {
     setContent(generateContent(title, changeTitle))
@@ -29,6 +35,15 @@ const useWindowPopUp = (): WindowPopUpHook => {
     setShowPopup(true);
   };
 
+  const toggleFullScreen = () => {
+    setIsFullScreen(!isFullScreen);
+  }
+
+  const toggleMinimized = () => {
+    console.log("???")
+    setIsMinimized(!isMinimized);
+    console.log(isMinimized)
+  }
 
   const changeTitle = (title: string) => {
     setTitle(title);
@@ -37,7 +52,7 @@ const useWindowPopUp = (): WindowPopUpHook => {
     setShowPopup(false);
   };
 
-  return { showPopup, title, content, browsingHistory, changeTitle, showWindowPopup, hideWindowPopup };
+  return { showPopup, title, content, browsingHistory, isFullScreen, isMinimized, changeTitle, showWindowPopup, hideWindowPopup, toggleFullScreen, toggleMinimized };
 };
 
 export default useWindowPopUp;
