@@ -76,41 +76,69 @@ const ProjectsStaticContent = [
     title : "McCormick French’s Mustard",
     description : "A playable ad for McCormick  French’s Mustard.",
     url : "https://c4d-cdn.adcolony.com/adc/4.11.2/240113/a25c7ac5-73ec-4c67-81f3-eb1266a0fdfc/0b84ffd4-556a-44d2-8d12-4e651bb39436.html",
+    solution : `<a href="https://nyxawards.com/winner-info.php?id=1918" target="_blank">Nyx Awards 2021 Winner</a>
+    This unit mainly utilizes JavaScripts request animation frame function and getBoundingClientRect function to follow the collision of the mustard drip and food items. 
+    When collision happens there Is a callback function checks weather the food is good or bad and plays the appropriate animation.
+    
+    `,
   },
   {
     title : "Axe the Runner",
     description : "A playable ad for Axe the Runner.",
     url : "https://c4d-cdn.adcolony.com/adc/3.4.2/210817/ca235e9f-cd6c-45c7-bf4c-dd891cd8e812/696bcdde-6d7b-419c-9c63-6e2b005b0d21.html",
+    solution : `Utilizes request animation frame function to move the background to create an endless runner effect.
+    Intervals are used to create jump animations.
+    `,
   },
   {
     title : "Hyundai360",
     description : "360 Experince for Hyundai.",
     url : "https://hyundai360.s3.eu-central-1.amazonaws.com/hyundai360/index.html",
+    solution : `Utilizes Three.js and panolens to create a 360 experince.
+    Saved in a S3 bucket and served with CloudFront.
+    `,
   },
   {
     title : "Kia360",
     description : "360 Experince for Kia.",
     url : "https://kia360.s3.eu-central-1.amazonaws.com/finalPano/kia360+pano/index.html",
+    solution : `Utilizes Three.js and panolens to create a 360 experince.
+    Saved in a S3 bucket and served with CloudFront.
+    `,
   },
   {
     title : "ShellBox",
     description : "A playable ad for ShellBox Brazil Market.",
     url : "https://c4d-cdn.adcolony.com/adc/4.11.2/240113/04248e88-921c-40b7-99e6-ec0ce1b12e5f/0ff81678-11ef-42d4-8b14-12398d8d4c65.html",
+    solution : `Collision detection with animationFrame and getBoundingClientRect functions.
+    Listeners for touch and mouse events on the steering wheel.
+    `,
   },
   {
     title : "Lego City",
     description : "A play to explore experince for Lego City.",
     url : "https://c4d-cdn.adcolony.com/adc/3.3.4/210803/2730d8f5-cff5-43e5-9962-14dfc4f32cfd/0cfeb415-ba42-4c44-8ba6-c3b55065627e.html",
+    solution : `Listeners on the main component to detect touch and mouse events.
+    Main component has a invisible div that is used to detect if the user is on the object or not.
+    Switching between 2 background images to create the lighting effect.
+    `,
   },
   {
     title : "Seven Seas",
     description : "A play to explore experince for Seven Seas.",
     url : "https://c4d-cdn.adcolony.com/adc/4.11.2/240113/63e4d803-1225-4b54-ae3e-0c09ca8b47b1/1180da09-dda4-4e6f-9603-2ea51fcffa59.html",
+    solution : `Listeners on the main component to detect touch and mouse events.
+    A canvas on top of the main component to create the coloring effect if the user is trying to highlight the right object.
+    `,
   },
   {
     title : "Jager Party",
     description : "A background replacement with device camera experince for Jager Party.",
     url : "https://jager-ar2.s3.eu-central-1.amazonaws.com/build/index.html",
+    solution : `Removes background from user camera and paints a canvas with the cropped image.
+    Made with React tensorflow and canvas.
+    Needs camera access and user permission to work.
+    `,
   }
 ]
 

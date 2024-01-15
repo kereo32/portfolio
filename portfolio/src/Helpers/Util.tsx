@@ -1,5 +1,5 @@
-import { InfoStaticContent,ProjectsStaticContent,ProjectFolders } from '../Constants/FinderContent';
-import {BasicNote,ProjectPreview,Folder} from '../Components/Shared';
+import { InfoStaticContent, ProjectsStaticContent, ProjectFolders } from '../Constants/FinderContent';
+import { BasicNote, ProjectPreview, Folder } from '../Components/Shared';
 
 const generateContent = (title: string, changeTitle: (title: string) => void) => {
   switch (title) {
@@ -13,11 +13,11 @@ const generateContent = (title: string, changeTitle: (title: string) => void) =>
       ));
     case 'Playables':
       return ProjectsStaticContent.map((item) => (
-        <ProjectPreview key={item.title} title={item.title} description={item.description} url={item.url} />
+        <ProjectPreview key={item.title} title={item.title} description={item.description} url={item.url} solution={item.solution} />
       ));
     default:
       return [];
   }
 };
 
-export { generateContent}
+export { generateContent }

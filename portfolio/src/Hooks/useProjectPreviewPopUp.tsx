@@ -6,9 +6,10 @@ interface ProjectPreviewHook {
   title: string;
   description: string;
   url: string;
+  solution: string;
 }
 
-const useProjectPreviewPopUp = ({ title, description, url }: ProjectPreviewHook) => {
+const useProjectPreviewPopUp = ({ title, description, url, solution }: ProjectPreviewHook) => {
   const [isPopupOpen, setIsPopupOpen] = useState(false);
 
   const openPopup = () => {
@@ -28,11 +29,11 @@ const useProjectPreviewPopUp = ({ title, description, url }: ProjectPreviewHook)
           </button>
         </div>
         <div className='flex flex-col w-full h-[80%] justify-start items-center overflow-y-auto'>
-          <div className='flex flex-col w-full h-[20%] justify-center items-start space-y-4 ml-6'>
+          <div className='flex flex-col w-full h-[20%] justify-center items-center space-y-4 ml-6'>
             <h1 className='font-bold'>{title}</h1>
             <h2 className='font-mono' dangerouslySetInnerHTML={{ __html: description.replace(/\n/g, '<br />') }} />
           </div>
-          <div className="flex flex-col w-[75%] h-[70%] justify-start items-center relative">
+          <div className="flex flex-col w-[75%] h-[60%] justify-start items-center relative">
             <img
               src={phone}
               alt="iPhone Background"
@@ -45,6 +46,10 @@ const useProjectPreviewPopUp = ({ title, description, url }: ProjectPreviewHook)
                 className="w-full h-full border-none rounded-3xl"
               ></iframe>
             </div>
+          </div>
+          <div className='flex flex-col w-[60%] h-[20%] justify-center items-center ml-6'>
+            <h1 className='font-bold'>Solution</h1>
+            <p className='font-medium z-10' dangerouslySetInnerHTML={{ __html: solution?.replace(/\n/g, '<br />') }} />
           </div>
         </div>
       </div>
