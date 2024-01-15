@@ -173,5 +173,23 @@ const WebStaticContent = [
   }
 
 ]
+const GamesStaticContent = [
+  {
+    title : "Deathroll",
+    description : "Player invented mini game from World of Warcraft, where you bet gold and roll a dice. Whoever rolls 1 loses. Number starts from betting value * 1000 and decreases by last roll value. Needs 2 players to enter the same roomID to play. You can test It by opening a second Incognito window.",
+    liveUrl : "https://wowdeathroll.netlify.app/",
+    githubUrl:"https://github.com/kereo32/TWDMP",
+    techStack : `
+    React | TypeScript | Redux | Node | Express | Socket.io | Material UI | Styled Components | Vite`
+  },
+  {
+    title : "BlackJack",
+    description : "A simple blackjack game with purest form of web development :D, no frameworks, no libraries, no nothing.",
+    liveUrl : "",
+    githubUrl:"https://github.com/kereo32/BlackJackJS",
+    techStack : `
+    HTML | CSS | JavaScript`
+  }
+]
 
-export { InfoStaticContent,PlayablesStaticContent,ProjectFolders,WebStaticContent}
+export { InfoStaticContent,PlayablesStaticContent,ProjectFolders,WebStaticContent,GamesStaticContent}

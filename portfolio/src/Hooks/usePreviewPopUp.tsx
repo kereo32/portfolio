@@ -9,7 +9,7 @@ interface WebPreviewPopUpHook {
   techStack: string;
 }
 
-const usePlayablePreviewPopUp = ({ title, description, liveUrl, githubUrl, techStack }: WebPreviewPopUpHook) => {
+const usePreviewPopUp = ({ title, description, liveUrl, githubUrl, techStack }: WebPreviewPopUpHook) => {
   const [isPopupOpen, setIsPopupOpen] = useState(false);
 
   const openPopup = () => {
@@ -29,7 +29,7 @@ const usePlayablePreviewPopUp = ({ title, description, liveUrl, githubUrl, techS
           </button>
         </div>
         <div className='flex flex-col w-full h-[80%] justify-start items-center overflow-y-auto'>
-          <div className='flex flex-col w-full h-[20%] justify-center items-center space-y-4 ml-6'>
+          <div className='flex flex-col w-[70%] h-[30%] justify-center items-center space-y-4 ml-6'>
             <h1 className='font-bold'>{title}</h1>
             <h2 className='font-mono' dangerouslySetInnerHTML={{ __html: description.replace(/\n/g, '<br />') }} />
           </div>
@@ -57,4 +57,4 @@ const usePlayablePreviewPopUp = ({ title, description, liveUrl, githubUrl, techS
   };
 };
 
-export default usePlayablePreviewPopUp;
+export default usePreviewPopUp;

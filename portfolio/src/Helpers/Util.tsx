@@ -1,5 +1,9 @@
-import { InfoStaticContent, PlayablesStaticContent, ProjectFolders, WebStaticContent } from '../Constants/FinderContent';
-import { BasicNote, PlayablePreview, Folder, WebPreview } from '../Components/Shared';
+import { InfoStaticContent, PlayablesStaticContent, ProjectFolders, WebStaticContent, GamesStaticContent } from '../Constants/FinderContent';
+import { BasicNote, PlayablePreview, Folder, ProjectPreview } from '../Components/Shared';
+
+import web from '/images/web.png'
+import game from '/images/game.png'
+
 
 const generateContent = (title: string, changeTitle: (title: string) => void) => {
   switch (title) {
@@ -17,7 +21,11 @@ const generateContent = (title: string, changeTitle: (title: string) => void) =>
       ));
     case 'Web':
       return WebStaticContent.map((item) => (
-        <WebPreview key={item.title} title={item.title} description={item.description} liveUrl={item.liveUrl} githubUrl={item.githubUrl} techStack={item.techStack} />
+        <ProjectPreview key={item.title} title={item.title} description={item.description} liveUrl={item.liveUrl} githubUrl={item.githubUrl} techStack={item.techStack} imgUrl={web} />
+      ));
+    case 'Games':
+      return GamesStaticContent.map((item) => (
+        <ProjectPreview key={item.title} title={item.title} description={item.description} liveUrl={item.liveUrl} githubUrl={item.githubUrl} techStack={item.techStack} imgUrl={game} />
       ));
     default:
       return [];
