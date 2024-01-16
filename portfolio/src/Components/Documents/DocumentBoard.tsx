@@ -1,4 +1,4 @@
-import {Folder} from '../Shared'
+import { Folder } from '../Shared'
 import Papers from './Papers';
 import useToggler from '../../Hooks/useToggler';
 import { useState } from 'react';
@@ -33,9 +33,6 @@ const DocumentBoard = ({ showWindowPopup, hideWindowPopup }: DocumentBoardProps)
       <div className="flex flex-col w-full h-fit items-end justify-end">
         <div className="flex flex-col w-ful h-full">
           <Papers title="Documents" />
-        </div>
-        <div className="flex flex-col w-ful h-full">
-          <Papers title="Notes" />
         </div>
       </div>
     </div>
