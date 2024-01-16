@@ -40,7 +40,6 @@ const useWindowPopUp = (): WindowPopUpHook => {
   }
 
   const toggleMinimized = () => {
-    console.log("???")
     setIsMinimized(!isMinimized);
     console.log(isMinimized)
   }

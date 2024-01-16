@@ -8,7 +8,7 @@ import bin from '/images/bin.png';
 import file from '/images/file.png';
 import ApplicationIcon from './ApplicationIcon';
 
-const ApplicationBar = () => {
+const ApplicationBar = ({ isMinimized, toggleMinimize }: { isMinimized?: boolean, toggleMinimize?: () => void }) => {
   const [navbarSize, setNavbarSize] = useState({ height: 'h-[8%]', translate: '' });
 
   const handleMouseEnter = () => {
@@ -26,7 +26,7 @@ const ApplicationBar = () => {
       onMouseLeave={handleMouseLeave}
     >
       <div className="flex flex-row min-h-max items-center bg-transparent border-[0.01rem] rounded-xl border-gray-400 shadow-2xl">
-        <ApplicationIcon applicationImageUrl={finder} />
+        <ApplicationIcon isMinmized={isMinimized} toggleMinimize={toggleMinimize} applicationImageUrl={finder} />
         <ApplicationIcon size={'w-8'} applicationImageUrl={discord} />
         <ApplicationIcon size={'w-8'} applicationImageUrl={spotify} />
         <ApplicationIcon size={'w-8'} applicationImageUrl={safari} />

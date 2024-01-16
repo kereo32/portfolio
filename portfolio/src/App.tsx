@@ -1,10 +1,13 @@
 import { ApplicationBar, TopNavBar, Main } from './Components';
+import useWindowPopUp from './Hooks/useWindowPopUp';
 function App() {
+  const windowPopupProps = useWindowPopUp();
+
   return (
     <div className="flex flex-col h-screen w-screen bg-macbg bg-cover">
       <TopNavBar />
-      <Main />
-      <ApplicationBar />
+      <Main {...windowPopupProps} />
+      <ApplicationBar isMinimized={windowPopupProps.isMinimized} toggleMinimize={windowPopupProps.toggleMinimized} />
     </div>
   );
 }
