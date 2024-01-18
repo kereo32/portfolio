@@ -1,11 +1,9 @@
 import { useState } from 'react';
 import verticalBar from '/images/verticalBar.png';
-import discord from '/images/discord.png';
+import linkedin from '/images/linkedin.png';
 import finder from '/images/finder.png';
-import spotify from '/images/spotify.png';
-import safari from '/images/safari.png';
-import bin from '/images/bin.png';
-import file from '/images/file.png';
+import github from '/images/github.png';
+import gmail from '/images/gmail.png';
 import ApplicationIcon from './ApplicationIcon';
 
 const ApplicationBar = ({ isMinimized, isAppOpen, toggleMinimize, showWindowPopup }: { isMinimized?: boolean, isAppOpen?: boolean, toggleMinimize?: () => void, showWindowPopup?: (title: string) => void }) => {
@@ -27,12 +25,10 @@ const ApplicationBar = ({ isMinimized, isAppOpen, toggleMinimize, showWindowPopu
     >
       <div className="flex flex-row min-h-max items-center bg-transparent border-[0.01rem] rounded-xl border-gray-400 shadow-2xl">
         <ApplicationIcon title='Info' isAppOpen={isAppOpen} showWindowPopup={showWindowPopup} isMinimized={isMinimized} toggleMinimize={toggleMinimize} applicationImageUrl={finder} />
-        <ApplicationIcon title='Info' size={'w-8'} applicationImageUrl={discord} />
-        <ApplicationIcon title='Info' size={'w-8'} applicationImageUrl={spotify} />
-        <ApplicationIcon title='Info' size={'w-8'} applicationImageUrl={safari} />
-        <img src={verticalBar} alt="vertical bar" className="w-2 h-[80%] invert opacity-30 cursor-pointer ml-4" />
-        <ApplicationIcon title='Info' applicationImageUrl={file} />
-        <ApplicationIcon title='Info' applicationImageUrl={bin} />
+        <ApplicationIcon url='https://www.linkedin.com/in/kerem-hac%C4%B1%C5%9Fabano%C4%9Flu' title='Info' size={'w-8'} applicationImageUrl={linkedin} />
+        <ApplicationIcon url='https://github.com/kereo32' title='Info' size={'w-8'} applicationImageUrl={github} />
+        <ApplicationIcon url='keremhacii@outlook.com' title='Info' size={'w-8'} applicationImageUrl={gmail} />
+        <img src={verticalBar} alt="vertical bar" className="w-6 h-[80%] invert opacity-30 cursor-pointer ml-4 mr-2" />
       </div>
     </div>
   );
