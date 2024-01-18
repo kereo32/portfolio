@@ -28,26 +28,32 @@ const usePlayablePreviewPopUp = ({ title, description, url, solution }: PreviewP
             <img src={close} alt="close" className="w-4 invert m-4" />
           </button>
         </div>
-        <div className='flex flex-col w-full h-[80%] justify-start items-center overflow-y-auto'>
+        <div className='flex flex-col w-full h-[80%] landscape:max-sm:w-full landscape:max-sm:h-full justify-start items-center overflow-y-auto overflow-x-hidden'>
           <div className='flex flex-col w-full h-[20%] justify-center items-center space-y-4 ml-6'>
             <h1 className='font-bold'>{title}</h1>
             <h2 className='font-mono' dangerouslySetInnerHTML={{ __html: description.replace(/\n/g, '<br />') }} />
+
           </div>
-          <div className="flex flex-col w-[75%] h-[60%] justify-start items-center relative">
+          <p className="text-xs font-mono mt-10 landscape:hidden">
+            *Preview can only be shown in landscape, please change your device direction.
+          </p>
+          <div className="flex flex-col w-[75%] h-[60%] landscape:max-sm:h-full justify-start items-center relative">
             <img
               src={phone}
               alt="iPhone Background"
-              className="w-[95%] h-[95%] absolute inset-0"
+              className="w-[95%] h-[95%] landscape:max-sm:h-full  absolute inset-0 portrait:max-sm:hidden"
             />
-            <div className="relative w-[78%] h-[71%] mt-4">
+
+            <div className="relative w-[78%] h-[71%] mt-4 portrait:max-sm:hidden">
               <iframe
                 title="iPhone Screen"
                 src={encodeURI(url)}
                 className="w-full h-full border-none rounded-3xl"
               ></iframe>
             </div>
+
           </div>
-          <div className='flex flex-col w-[60%] h-[20%] justify-center items-center ml-6'>
+          <div className='flex flex-col w-[60%] h-[20%] justify-center items-center ml-6 max-sm:hidden'>
             <h1 className='font-bold'>Solution</h1>
             <p className='font-medium z-10' dangerouslySetInnerHTML={{ __html: solution?.replace(/\n/g, '<br />') }} />
           </div>

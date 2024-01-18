@@ -18,14 +18,14 @@ type MainProps = {
 const Main = ({ showPopup, title, content, browsingHistory, isMinimized, isFullScreen, showWindowPopup, hideWindowPopup, changeTitle, toggleFullScreen, toggleMinimized }: MainProps) => {
   return (
     <div className="flex flex-row w-full h-full justify-evenly items-start">
-      <div className="flex flex-col w-[70%] h-[85%] justify-center items-end">
+      <div className="flex flex-col w-[70%] h-[85%] max-sm:w-full max-sm:h-full justify-center items-end landscape:max-sm:items-start portrait:max-sm:items-center">
         {
           <Finder isMinimized={isMinimized} toggleMinimized={toggleMinimized} isFullScreen={isFullScreen} toggleFullScreen={toggleFullScreen} hideWindowPopup={hideWindowPopup} browsingHistory={browsingHistory} changeTitle={changeTitle} isOpen={showPopup} title={title}>
             {content}
           </Finder>
         }
       </div>
-      <div className="flex flex-col w-[33%] h-full justify-center">
+      <div className="flex flex-col w-[33%] h-full justify-center max-sm:hidden">
         <DocumentBoard hideWindowPopup={hideWindowPopup} showWindowPopup={showWindowPopup} />
       </div>
     </div>

@@ -7,15 +7,15 @@ type BasicNoteProps = {
   content: string
 }
 
-const BasicNote = ({content,name,title}: BasicNoteProps) => {
-  const {openPopup,Popup,isPopupOpen} = useNotePopUp({title,content})
+const BasicNote = ({ content, name, title }: BasicNoteProps) => {
+  const { openPopup, Popup, isPopupOpen } = useNotePopUp({ title, content })
   return (
-    <div className='flex flex-col w-fit h-[10%] justify-center m-4'>
-      <button className='flex flex-col items-center' onClick={()=>openPopup()}>
-      <img src={basicNote} alt="note" className="w-8 mt-2" />
-      <span className="text-white text-sm font-thin mt-1">{name}</span>
+    <div className='flex flex-col w-fit h-[10%] justify-center m-4 max-sm:landscape:m-6'>
+      <button className='flex flex-col items-center' onClick={() => openPopup()}>
+        <img src={basicNote} alt="note" className="w-8 mt-2" />
+        <span className="text-white text-sm font-thin mt-1">{name}</span>
       </button>
-      {isPopupOpen && <Popup/>}
+      {isPopupOpen && <Popup />}
     </div>
   )
 }

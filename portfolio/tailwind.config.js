@@ -6,6 +6,9 @@ export default {
       backgroundImage: {
         macbg: "url('/images/macbg.jpg')",
       },
+      screens: {
+        'max-sm': { max: '935px' },
+      },
       colors: {
         topBarHard: '#993910',
         topBarEasy: '#c28870',

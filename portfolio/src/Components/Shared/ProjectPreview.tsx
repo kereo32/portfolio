@@ -13,7 +13,7 @@ const ProjectPreview = ({ title, description, liveUrl, githubUrl, techStack, img
   const { openPopup, isPopupOpen, Popup } = usePreviewPopUp({ title, description, liveUrl, githubUrl, techStack })
   return (
     <>
-      <div className='flex flex-col w-[10%] h-[10%] justify-center m-4'>
+      <div className='flex flex-col w-[10%] h-[10%] justify-center m-4 max-sm:landscape:m-6 max-sm:portrait:m-8'>
         <button className='flex flex-col items-center' onClick={() => openPopup()}>
           <img src={imgUrl} alt="note" className="w-10 mt-2 invert" />
           <span className="text-white text-sm font-thin mt-1">{title.length > 8 ? title.trim().split(' ')[0] : title}</span>
