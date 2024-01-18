@@ -4,7 +4,7 @@ function App() {
   const windowPopupProps = useWindowPopUp();
 
   return (
-    <div className="flex flex-col h-screen w-screen bg-macbg bg-cover">
+    <div className="flex flex-col h-screen w-screen bg-macbg bg-cover overflow-hidden">
       <TopNavBar showWindowPopup={windowPopupProps.showWindowPopup} />
       <Main {...windowPopupProps} />
       <ApplicationBar isAppOpen={windowPopupProps.showPopup} showWindowPopup={windowPopupProps.showWindowPopup} isMinimized={windowPopupProps.isMinimized} toggleMinimize={windowPopupProps.toggleMinimized} />

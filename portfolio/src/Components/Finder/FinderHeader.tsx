@@ -27,7 +27,7 @@ const FinderHeader = ({ title, browsingHistory, changeTitle }: FinderHeaderType)
       </div>
       <div className="flex flex-row w-[87%] h-full items-center justify-between">
         <p className="text-white font-thin text-sm">{title}</p>
-        <SearchComponent />
+        <SearchComponent changeTitle={changeTitle} />
       </div>
     </div>
   );
