@@ -13,7 +13,7 @@ const SearchComponent = ({ changeTitle }: { changeTitle: (title: string) => void
   }
 
   return (
-    <div className="relative">
+    <div className="relative max-sm:hidden">
       <div className={`flex flex-row w-fit items-center`}>
         <div className={`flex flex-row h-full w-full transition-transform transform ${isExpanded ? 'scale-x-100' : 'scale-x-0'} items-center`}>
           <img alt="leftArrow" src={leftArrow} className="w-4 h-4 invert cursor-pointer rotate-180 mr-2" onClick={handleIconClick} />

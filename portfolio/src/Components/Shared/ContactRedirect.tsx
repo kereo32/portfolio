@@ -6,7 +6,7 @@ type ContactRedirectProps = {
 
 const ContactRedirect = ({ title, url, imgUrl }: ContactRedirectProps) => {
   return (
-    <div className='flex flex-col w-[10%] h-[10%] justify-center m-4 max-sm:landscape:m-6 max-sm:portrait:m-8'>
+    <div className='flex flex-col w-[10%] h-[10%] justify-center m-4 max-sm:m-6 '>
       {url.includes('outlook') ?
         <a href={`mailto:${url}`} className='flex flex-col items-center'>
           <img src={imgUrl} alt="note" className="w-10 mt-2" />

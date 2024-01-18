@@ -17,7 +17,7 @@ const FinderSideBar = ({ title, changeTitle, hideWindowPopup, toggleFullScreen, 
 
   return (
     <>
-      <div className="flex flex-col w-[20%] landscape:max-sm:w-[10%]  h-full bg-finderHeaderBg bg-opacity-90 rounded-l-lg">
+      <div className="flex flex-col w-[20%] portrait:max-sm:w-[28%] landscape:max-sm:w-[12%]  h-full bg-finderHeaderBg bg-opacity-90 rounded-l-lg">
         <div className="flex flex-row h-[10%] w-full justify-start items-center">
           <div className="flex flex-row ml-2 h-full w-[40%] justify-between">
             <button onClick={hideWindowPopup}>

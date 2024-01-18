@@ -38,7 +38,7 @@ const generateContent = (title: string, changeTitle: (title: string) => void) =>
       ));
     case 'Contact':
       return ContactStaticContent.map((item) => (
-        <ContactRedirect title={item.title} url={item.url} imgUrl={item.imgUrl} />
+        <ContactRedirect key={item.title} title={item.title} url={item.url} imgUrl={item.imgUrl} />
       ));
     default:
       return [];
