@@ -33,6 +33,7 @@ const useWindowPopUp = (): WindowPopUpHook => {
   const showWindowPopup = (title: string) => {
     setTitle(title);
     setShowPopup(true);
+    setIsMinimized(false);
   };
 
   const toggleFullScreen = () => {
@@ -41,7 +42,6 @@ const useWindowPopUp = (): WindowPopUpHook => {
 
   const toggleMinimized = () => {
     setIsMinimized(!isMinimized);
-    console.log(isMinimized)
   }
 
   const changeTitle = (title: string) => {

@@ -1,8 +1,9 @@
-import { InfoStaticContent, PlayablesStaticContent, ProjectFolders, WebStaticContent, GamesStaticContent } from '../Constants/FinderContent';
-import { BasicNote, PlayablePreview, Folder, ProjectPreview } from '../Components/Shared';
+import { InfoStaticContent, PlayablesStaticContent, ProjectFolders, WebStaticContent, GamesStaticContent, FinderFolders, PersonalStaticContent, ContactStaticContent } from '../Constants/FinderContent';
+import { BasicNote, PlayablePreview, Folder, ProjectPreview, ContactRedirect } from '../Components/Shared';
 
 import web from '/images/web.png'
 import game from '/images/game.png'
+
 
 
 const generateContent = (title: string, changeTitle: (title: string) => void) => {
@@ -26,6 +27,18 @@ const generateContent = (title: string, changeTitle: (title: string) => void) =>
     case 'Games':
       return GamesStaticContent.map((item) => (
         <ProjectPreview key={item.title} title={item.title} description={item.description} liveUrl={item.liveUrl} githubUrl={item.githubUrl} techStack={item.techStack} imgUrl={game} />
+      ));
+    case 'Finder':
+      return FinderFolders.map((item) => (
+        <Folder key={item.title} title={item.title} isOpen={false} customClickHandler={changeTitle} />
+      ));
+    case 'Personal':
+      return PersonalStaticContent.map((item) => (
+        <BasicNote key={item.name} name={item.name} title={item.title} content={item.content} />
+      ));
+    case 'Contact':
+      return ContactStaticContent.map((item) => (
+        <ContactRedirect title={item.title} url={item.url} imgUrl={item.imgUrl} />
       ));
     default:
       return [];

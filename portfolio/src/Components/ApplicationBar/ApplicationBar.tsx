@@ -8,7 +8,7 @@ import bin from '/images/bin.png';
 import file from '/images/file.png';
 import ApplicationIcon from './ApplicationIcon';
 
-const ApplicationBar = ({ isMinimized, toggleMinimize }: { isMinimized?: boolean, toggleMinimize?: () => void }) => {
+const ApplicationBar = ({ isMinimized, isAppOpen, toggleMinimize, showWindowPopup }: { isMinimized?: boolean, isAppOpen?: boolean, toggleMinimize?: () => void, showWindowPopup?: (title: string) => void }) => {
   const [navbarSize, setNavbarSize] = useState({ height: 'h-[8%]', translate: '' });
 
   const handleMouseEnter = () => {
@@ -26,13 +26,13 @@ const ApplicationBar = ({ isMinimized, toggleMinimize }: { isMinimized?: boolean
       onMouseLeave={handleMouseLeave}
     >
       <div className="flex flex-row min-h-max items-center bg-transparent border-[0.01rem] rounded-xl border-gray-400 shadow-2xl">
-        <ApplicationIcon isMinmized={isMinimized} toggleMinimize={toggleMinimize} applicationImageUrl={finder} />
-        <ApplicationIcon size={'w-8'} applicationImageUrl={discord} />
-        <ApplicationIcon size={'w-8'} applicationImageUrl={spotify} />
-        <ApplicationIcon size={'w-8'} applicationImageUrl={safari} />
+        <ApplicationIcon title='Info' isAppOpen={isAppOpen} showWindowPopup={showWindowPopup} isMinimized={isMinimized} toggleMinimize={toggleMinimize} applicationImageUrl={finder} />
+        <ApplicationIcon title='Info' size={'w-8'} applicationImageUrl={discord} />
+        <ApplicationIcon title='Info' size={'w-8'} applicationImageUrl={spotify} />
+        <ApplicationIcon title='Info' size={'w-8'} applicationImageUrl={safari} />
         <img src={verticalBar} alt="vertical bar" className="w-2 h-[80%] invert opacity-30 cursor-pointer ml-4" />
-        <ApplicationIcon applicationImageUrl={file} />
-        <ApplicationIcon applicationImageUrl={bin} />
+        <ApplicationIcon title='Info' applicationImageUrl={file} />
+        <ApplicationIcon title='Info' applicationImageUrl={bin} />
       </div>
     </div>
   );

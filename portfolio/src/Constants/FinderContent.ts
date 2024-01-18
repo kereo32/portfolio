@@ -52,6 +52,24 @@ const InfoStaticContent = [
     `
   }
 ]
+const FinderFolders = [
+  {
+    title: "Info",
+  },
+  {
+
+    title: "Projects",
+  },
+  {
+
+    title: "Personal",
+  },
+  {
+
+    title: "Contact",
+  },
+
+]
 const ProjectFolders = [
   
   {
@@ -191,5 +209,35 @@ const GamesStaticContent = [
     HTML | CSS | JavaScript`
   }
 ]
+const PersonalStaticContent = [
+  {
+    name : "Read.ME",
+    title : "More Personal",
+    content :`Becides coding I like to produce electronic music and play video games. 
+      I workout 6 days a week and I am a big fan of MMA.
+      I strongly believe as humans we should always try to improve ourselves and learn new things.
+      Since we have one life, we should try to make the most out of it.
+      I will be adding more blog content here about my hobbies, coding and life in general.
+    ` 
+  },
 
-export { InfoStaticContent,PlayablesStaticContent,ProjectFolders,WebStaticContent,GamesStaticContent}
+]
+const ContactStaticContent = [
+  {
+    title : "Linkedin",
+    url :`https://www.linkedin.com/in/kerem-hac%C4%B1%C5%9Fabano%C4%9Flu/`,
+    imgUrl : "/images/linkedin.png"
+  },
+  {
+    title : "Github",
+    url :"https://www.github.com/kereo32",
+    imgUrl : "/images/github.png"
+  },
+  {
+    title : "Email",
+    url :"keremhacii@outlook.com",
+    imgUrl : "/images/gmail.png"
+  }
+]
+
+export { InfoStaticContent,PlayablesStaticContent,ProjectFolders,WebStaticContent,GamesStaticContent,FinderFolders,PersonalStaticContent,ContactStaticContent}
